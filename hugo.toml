@@ -1,0 +1,87 @@
+baseURL = "https://yourname.dev/"
+languageCode = "en-us"
+title = "Your Name"
+theme = "PaperMod"
+enableRobotsTXT = true
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  ctf = "ctfs"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  style = "monokai"
+
+[params]
+  env = "production"
+  description = "CTF writeups, projects, and notes on security."
+  author = "Your Name"
+  defaultTheme = "auto"
+  mainSections = ["writeups", "posts"]
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowShareButtons = false
+  ShowRssButtonInSectionTermList = true
+
+  [params.assets]
+    disableHLJS = true
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm Your Name 👋"
+    Content = "Security-focused CS grad. I write up CTF challenges I've solved and things I've learned along the way."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/yourusername"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/yourusername/"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:you@yourname.dev"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[menu]
+  [[menu.main]]
+    name = "Writeups"
+    url = "/writeups/"
+    weight = 10
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    name = "CTFs"
+    url = "/ctfs/"
+    weight = 30
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 40
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 50
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 60
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume.pdf"
+    weight = 70
