@@ -1,0 +1,37 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . | markdownify }}</div>
+  {{- end }}
+</header>
+
+{{- $tags := slice }}
+{{- range .RegularPages }}{{ with .Params.tags }}{{ $tags = $tags | append . }}{{ end }}{{ end }}
+{{- with $tags | uniq | sort }}
+<div class="tag-filter">
+  <button type="button" class="active" data-tag="">All</button>
+  {{- range . }}
+  <button type="button" data-tag="{{ . | urlize }}">{{ . }}</button>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- range .RegularPages }}{{ partial "entry.html" . }}{{ end }}
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.tag-filter button');
+    var entries = document.querySelectorAll('.post-entry');
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        buttons.forEach(function (x) { x.classList.toggle('active', x === b); });
+        entries.forEach(function (e) {
+          var tags = (e.dataset.tags || '').split(' ');
+          e.hidden = b.dataset.tag !== '' && tags.indexOf(b.dataset.tag) === -1;
+        });
+      });
+    });
+  })();
+</script>
+{{- end }}

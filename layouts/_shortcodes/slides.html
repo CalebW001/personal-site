@@ -1,0 +1,5 @@
+{{- $src := .Get "src" | default (.Get 0) -}}
+<div class="slides-embed">
+  <iframe src="{{ $src }}" allowfullscreen loading="lazy"
+    frameborder="0" mozallowfullscreen webkitallowfullscreen></iframe>
+</div>

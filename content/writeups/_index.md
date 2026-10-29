@@ -1,4 +1,4 @@
 ---
 title: "Writeups"
-description: "CTF challenge writeups, by event and category."
+description: "Writeups for CTF challenges I've solved."
 ---

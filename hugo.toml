@@ -1,20 +1,17 @@
-baseURL = "https://yourname.dev/"
+baseURL = "https://calebwarzocha.dev/"
 languageCode = "en-us"
-title = "Your Name"
+title = "Caleb Warzocha"
 theme = "PaperMod"
 enableRobotsTXT = true
-enableEmoji = true
 
 [pagination]
   pagerSize = 10
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
-  ctf = "ctfs"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 
 [markup.highlight]
   codeFences = true
@@ -23,65 +20,49 @@ enableEmoji = true
 
 [params]
   env = "production"
-  description = "CTF writeups, projects, and notes on security."
-  author = "Your Name"
-  defaultTheme = "auto"
-  mainSections = ["writeups", "posts"]
-  ShowReadingTime = true
+  description = "Caleb Warzocha - CTF writeups and projects."
+  email = "warzochaec@gmail.com"
+  profileImage = "/img/profile.jpg"
+  defaultTheme = "dark"
+  disableThemeToggle = true
+  mainSections = ["writeups", "projects"]
+  ShowReadingTime = false
+  hideMeta = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowToc = true
   TocOpen = false
   ShowShareButtons = false
-  ShowRssButtonInSectionTermList = true
 
   [params.assets]
     disableHLJS = true
 
-  [params.homeInfoParams]
-    Title = "Hi, I'm Your Name 👋"
-    Content = "Security-focused CS grad. I write up CTF challenges I've solved and things I've learned along the way."
-
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/yourusername"
+    url = "https://github.com/CalebW001"
   [[params.socialIcons]]
     name = "linkedin"
-    url = "https://www.linkedin.com/in/yourusername/"
+    url = "https://www.linkedin.com/in/caleb-warzocha"
   [[params.socialIcons]]
-    name = "email"
-    url = "mailto:you@yourname.dev"
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/index.xml"
+    name = "tryhackme"
+    title = "TryHackMe"
+    url = "https://tryhackme.com/p/cewarzocha"
 
 [menu]
   [[menu.main]]
-    name = "Writeups"
-    url = "/writeups/"
+    name = "Home"
+    url = "/"
     weight = 10
   [[menu.main]]
-    name = "Blog"
-    url = "/posts/"
+    name = "Writeups"
+    url = "/writeups/"
     weight = 20
   [[menu.main]]
-    name = "CTFs"
-    url = "/ctfs/"
+    name = "Projects"
+    url = "/projects/"
     weight = 30
   [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 40
-  [[menu.main]]
-    name = "Search"
-    url = "/search/"
-    weight = 50
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 60
-  [[menu.main]]
     name = "Resume"
-    url = "/resume.pdf"
-    weight = 70
+    url = "/resume/"
+    weight = 40

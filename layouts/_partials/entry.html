@@ -1,0 +1,16 @@
+<article class="post-entry"{{ with .Params.tags }} data-tags="{{ delimit (apply . "urlize" ".") " " }}"{{ end }}>
+  <header class="entry-header">
+    <h2>{{ .Title }}{{ if .Draft }} <span class="entry-draft">(draft)</span>{{ end }}</h2>
+  </header>
+  {{- with .Summary }}
+  <div class="entry-content">
+    <p>{{ . | plainify | htmlUnescape }}</p>
+  </div>
+  {{- end }}
+  {{- with .Params.tags }}
+  <footer class="entry-footer">
+    {{ delimit . ", " }}
+  </footer>
+  {{- end }}
+  <a class="entry-link" aria-label="{{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</article>

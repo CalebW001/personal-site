@@ -1,0 +1,48 @@
+{{- define "main" }}
+<section class="intro">
+  {{- with site.Params.profileImage }}
+  <img class="profile-img" src="{{ . | relURL }}" alt="{{ site.Title }}" width="140" height="140">
+  {{- end }}
+  <h1>{{ site.Title }}</h1>
+  <div class="contact">
+    {{ partial "social_icons.html" (dict) }}
+    {{- with site.Params.email }}
+    <span class="email">
+      <code id="email">{{ . }}</code>
+      <button type="button" class="copy-email" data-copy="{{ . }}">Copy</button>
+    </span>
+    {{- end }}
+  </div>
+  <div class="md-content">{{ .Content }}</div>
+</section>
+
+{{- with site.Data.news }}
+<section class="home-section">
+  <h2>News</h2>
+  <ul class="news">
+    {{- range . }}
+    <li><time>{{ time.Format "Jan 2006" .date }}</time><span>{{ .text | markdownify }}</span></li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+{{- $recent := first 3 (where site.RegularPages "Section" "in" site.Params.mainSections) }}
+{{- with $recent }}
+<section class="home-section">
+  <h2>Recent</h2>
+  {{- range . }}{{ partial "entry.html" . }}{{ end }}
+</section>
+{{- end }}
+
+<script>
+  document.querySelectorAll('.copy-email').forEach(function (b) {
+    b.addEventListener('click', function () {
+      navigator.clipboard.writeText(b.dataset.copy).then(function () {
+        b.textContent = 'Copied';
+        setTimeout(function () { b.textContent = 'Copy'; }, 1500);
+      });
+    });
+  });
+</script>
+{{- end }}

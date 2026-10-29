@@ -2,16 +2,9 @@
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-ctfs: [""]
-categories: [""]   # pwn, web, crypto, rev, forensics, misc
-tags: []
-difficulty: ""     # easy, medium, hard
+tags: []   # category and event, e.g. pwn, picoctf-2026
 summary: ""
 ---
-
-## TL;DR
-
-
 
 ## Challenge
 
@@ -21,17 +14,13 @@ summary: ""
 
 
 
-## Dead ends
+## What didn't work
 
 
 
 ## Solution
 
 
-
-```
-flag{...}
-```
 
 ## Takeaways
 
