@@ -8,4 +8,4 @@ I've particularly enjoyed blue team and digital forensics challenges through cla
 
 I'm especially drawn to technical and investigative work and understand how and why software behaves under the surface, both when it's functioning correctly and when it's not. I'm continuing to expand my knowledge of these areas through study and hands-on projects.
 
-I'm currently seeking internship opportunities in cybersecurity and software engineering, where I can continue building hands-on experience.
+I'm currently seeking full-time positions in cybersecurity and software engineering for after I graduate, where I can continue building hands-on experience.
