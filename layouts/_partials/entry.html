@@ -7,10 +7,8 @@
     <p>{{ . | plainify | htmlUnescape }}</p>
   </div>
   {{- end }}
-  {{- with .Params.tags }}
   <footer class="entry-footer">
-    {{ delimit . ", " }}
+    {{ .Date | time.Format ":date_medium" }}{{ with .Params.tags }} · {{ delimit . ", " }}{{ end }}
   </footer>
-  {{- end }}
   <a class="entry-link" aria-label="{{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>

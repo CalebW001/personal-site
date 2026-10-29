@@ -1,6 +1,6 @@
 ---
 title: "Memory Analysis Walkthrough"
-date: 2026-10-03
+date: 2026-10-01
 draft: false
 tags: ["forensics", "volatility"]
 summary: "My walkthrough of the memory forensics challenge I built for the Cybersecurity Club workshop."
